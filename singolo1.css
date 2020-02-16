@@ -57,7 +57,7 @@ html {
 }
 
 body {
-  font-family: Lato, Helvetica, sans-serif;
+  font-family: 'Lato Regular', sans-serif;
   font-size: 1.8rem;
   color: #767e9e;
   padding: 0;
@@ -84,13 +84,14 @@ header a {
   transition: all 0.3s ease;
 }
 .wrapper {
-  width: 1020px;
+  max-width: 1020px;
   margin: 0 auto;
 }
 .container {
-  width: 960px;
+  max-width: 960px;
   padding: 0 10px;
   margin: 0 auto;
+  position: relative;
 }
 
 .header-wrapper {
@@ -115,7 +116,7 @@ header a {
 }
 
 .header-navigation ul li {
-  margin: 0 14.3px;
+  margin: 0 14.5px;
 }
 .header-navigation ul li:last-child {
   margin-right: 0;
@@ -140,85 +141,131 @@ header a {
   background-color: #f06c64;
   height: 600px;
   border-bottom: 6px solid #ea676b;
+  position: relative;
+}
+
+.iphone {
+display: flex;
+padding-top: 53px;
+align-items: center;
+justify-content: center;
+}
+.iphone-vertical {
+margin-right: 36px;
+}
+
+.iphone-horizontal {
+margin-left: 36px;
+padding-left: 1px;
+
+}
+
+.left {
+background-image: url(./assets/img/left.png);
+height: 27px;
+width: 16px;
+position: absolute;
+left:12px;
+top:280px;
+cursor: pointer;
+}
+
+.right {
+background-image: url(./assets/img/right.png);
+height: 27px;
+width: 16px;
+position: absolute;
+right:10px;
+top:280px;
+cursor: pointer;
+}
+
+.right:hover {
+  background-image: url(./assets/img/right_black.png);
+
+}
+.left:hover {
+  background-image: url(./assets/img/left_black.png);
+
 }
 
 .services {
   background-color: #f2f2f2;
   border-bottom: 6px solid #fff;
   padding: 60px 0;
-
 }
 
 .services p {
   line-height: 3rem;
   font-weight: 300;
+  text-align: justify;
 }
 
 .services-grid {
-  margin-top: 45px;
+
   display: grid;
- grid-template-columns: 1fr 1fr 1fr;
- grid-gap: 33px 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 33px 20px;
 }
 
 .services-item {
-
-
+  overflow: hidden;
 }
-.item-title {
-line-height: 1.7rem;
-font-size: 1.8rem;
-font-weight: 900;
 
+.item-title {
+  line-height: 1.7rem;
+  font-size: 1.8rem;
+  font-weight: 900;
+  padding-left: 80px;
 }
 .item-text {
-margin-top: 10px;
-line-height: 2.1rem;
-font-size: 1.2rem;
-
+  margin-top: 10px;
+  line-height: 2.1rem;
+  font-size: 1.2rem;
+  padding-left: 80px;
 }
 
-.icon-pen{
+.icon-pen {
   background-image: url(./assets/img/pen.svg);
   width: 61px;
   height: 61px;
-  margin:0 20px 20px 0;
-float: left;
+  margin: 0 20px 20px 0;
+  float: left;
 }
 
-.icon-bulb{
+.icon-bulb {
   background-image: url(./assets/img/bulb.svg);
   width: 61px;
   height: 61px;
-  margin:0 20px 20px 0;
-float: left;
+  margin: 0 20px 20px 0;
+  float: left;
 }
 
-.icon-heart{
+.icon-heart {
   background-image: url(./assets/img/heart.svg);
   width: 61px;
   height: 61px;
-  margin:0 20px 20px 0;
-float: left;
+  margin: 0 20px 20px 0;
+  float: left;
 }
-.icon-phone{
+.icon-phone {
   background-image: url(./assets/img/phone.svg);
   width: 61px;
   height: 61px;
-  margin:0 20px 20px 0;
-float: left;
+  margin: 0 20px 20px 0;
+  float: left;
 }
-.icon-bubble{
+.icon-bubble {
   background-image: url(./assets/img/bubble.svg);
   width: 61px;
   height: 61px;
-  margin:0 20px 20px 0;
-float: left;
+  margin: 0 20px 20px 0;
+  float: left;
 }
-.icon-star{
+.icon-star {
   background-image: url(./assets/img/star.svg);
   width: 61px;
   height: 61px;
-  margin:0 20px 20px 0;
-float: left;
+  margin: 0 20px 20px 0;
+  float: left;
 }
