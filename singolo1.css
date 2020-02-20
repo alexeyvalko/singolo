@@ -56,6 +56,7 @@
 
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -109,7 +110,7 @@ header a {
   color: #424758;
   padding-top: 11px;
 
-  width: 371px;
+  width: 372px;
 }
 .header-navigation a:hover {
   color: #f06c64;
@@ -131,7 +132,9 @@ header a {
 .header-navigation ul li {
   list-style: none;
   position: relative;
+
 }
+
 
 .header-navigation ul li::after {
   content: "";
@@ -140,23 +143,33 @@ header a {
   height: 3px;
   width: 3px;
   top: 5px;
-  margin-left: 12px;
+  margin-left: 13.5px;
   border-radius: 50%;
 }
 
 .header-navigation ul li:last-child::after {
   display: none;
 }
-
-.logo {
+.logo h1,
+.logo span {
   font-size: 2.5rem;
   letter-spacing: -0.55px;
   margin-top: 3px;
+
+
 }
+.logo a h1{
+  color: #fff;
+  font-family: "Lato Bold";
+  display: inline-block;
+
+}
+
 
 .logo span {
   margin-left: -6px;
   color: #f06c64;
+
 }
 
 .slider {
@@ -214,6 +227,13 @@ header a {
   padding: 62px 0 50px 0;
 }
 
+.services-title {
+  margin: 0;
+  color: #666d89;
+  font-size: 3rem;
+  font-family: "Lato Black";
+}
+
 .services-text {
   margin-top: 17px;
   line-height: 3rem;
@@ -242,6 +262,7 @@ header a {
   font-family: "Lato Black";
   padding-left: 80px;
   color: #666d89;
+
 }
 .item-text {
   margin-top: 10px;
