@@ -132,9 +132,7 @@ header a {
 .header-navigation ul li {
   list-style: none;
   position: relative;
-
 }
-
 
 .header-navigation ul li::after {
   content: "";
@@ -155,21 +153,16 @@ header a {
   font-size: 2.5rem;
   letter-spacing: -0.55px;
   margin-top: 3px;
-
-
 }
-.logo a h1{
+.logo a h1 {
   color: #fff;
   font-family: "Lato Bold";
   display: inline-block;
-
 }
-
 
 .logo span {
   margin-left: -6px;
   color: #f06c64;
-
 }
 
 .slider {
@@ -234,7 +227,7 @@ header a {
   font-family: "Lato Black";
 }
 
-.services-text {
+.text {
   margin-top: 17px;
   line-height: 3rem;
   font-family: "Lato Light";
@@ -262,7 +255,6 @@ header a {
   font-family: "Lato Black";
   padding-left: 80px;
   color: #666d89;
-
 }
 .item-text {
   margin-top: 10px;
@@ -322,8 +314,71 @@ header a {
   background-color: #2d303a;
   border-bottom: 6px solid #323746;
 }
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-template-rows: repeat(auto-fit, 189px);
+  grid-gap: 16px 20px;
+}
 .about {
   background-color: #f2f2f2;
   border-bottom: 6px solid #fff;
 }
 
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: repeat(auto-fit, 450px);
+  grid-gap: 0px 20px;
+  padding-top: 50px;
+}
+
+.about-grid__item {
+  overflow: hidden;
+}
+
+.about-grid__item__name {
+  line-height: 1.8rem;
+  font-size: 1.8rem;
+  font-family: "Lato Black";
+  color: #666d89;
+}
+.about-grid__item__text {
+  margin-top: 10px;
+  line-height: 1.8;
+  font-size: 1.2rem;
+  text-align: justify;
+  padding-bottom:30px;
+}
+
+.social {
+  display: inline-block;
+}
+.google {
+  background: url(./assets/img/Google.png);
+  width: 32px;
+  height: 32px;
+  margin-right: 6px;
+  display: inline-block;
+}
+.facebook {
+  background: url(./assets/img/Facebook.png);
+  width: 32px;
+  height: 32px;
+  margin-right: 6px;
+  display: inline-block;
+}
+.twitter {
+  background: url(./assets/img/Twitter.png);
+  width: 32px;
+  height: 32px;
+  margin-right: 6px;
+  display: inline-block;
+}
+.linkedin {
+  background: url(./assets/img/LinkedIn.png);
+  width: 32px;
+  height: 32px;
+  margin-right: 6px;
+  display: inline-block;
+}
