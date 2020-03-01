@@ -331,11 +331,12 @@ header a {
   margin: 0;
   cursor: pointer;
   transition: all 0.3s ease;
+  background-color: #464b5e;
+
 
 }
 
 .portfolio-grid__item:hover {
-  background-color: #464b5e;
   opacity: 0.8;
 }
 .portfolio-tags {
