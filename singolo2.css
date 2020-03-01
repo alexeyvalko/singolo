@@ -320,13 +320,23 @@ header a {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   grid-template-rows: repeat(auto-fit, 187px);
   grid-gap: 20px;
-
+  overflow: hidden;
+  max-height: 621px;
 }
 .portfolio-grid__item {
   overflow: hidden;
   height: 187px;
+  width: 220px;
   padding: 0;
   margin: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+}
+
+.portfolio-grid__item:hover {
+  background-color: #464b5e;
+  opacity: 0.8;
 }
 .portfolio-tags {
   padding-bottom: 21px;
@@ -341,6 +351,7 @@ header a {
   margin-right: 3px;
   cursor: pointer;
 text-align: justify;
+transition: all 0.3s ease;
 
 }
 
@@ -369,14 +380,16 @@ text-align: justify;
 }
 
 .about-grid__item__name {
-  line-height: 1.8rem;
+  width: 299px;
+  height: 20px;
   font-size: 1.8rem;
   font-family: "Lato Black";
   color: #666d89;
-  margin-top: 13px;
+  margin-top: 12px;
+  overflow: hidden;
 }
 .about-grid__item__text {
-  margin-top: 10px;
+  margin-top: 9px;
   line-height: 1.8;
   font-size: 1.2rem;
   text-align: justify;
@@ -385,6 +398,7 @@ text-align: justify;
 
 .social {
   display: inline-block;
+
 }
 .google {
   background: url(./assets/img/Google.png);
@@ -392,6 +406,8 @@ text-align: justify;
   height: 32px;
   margin-right: 3px;
   display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 .facebook {
   background: url(./assets/img/Facebook.png);
@@ -399,6 +415,8 @@ text-align: justify;
   height: 32px;
   margin-right: 3px;
   display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 .twitter {
   background: url(./assets/img/Twitter.png);
@@ -406,6 +424,8 @@ text-align: justify;
   height: 32px;
   margin-right: 3px;
   display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 .linkedin {
   background: url(./assets/img/LinkedIn.png);
@@ -413,4 +433,10 @@ text-align: justify;
   height: 32px;
   margin-right: 3px;
   display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.google:hover, .facebook:hover, .twitter:hover, .linkedin:hover {
+  opacity: 0.7;
 }
