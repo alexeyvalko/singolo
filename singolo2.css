@@ -262,7 +262,6 @@ header a {
   font-size: 1.2rem;
   padding-left: 80px;
   text-align: justify;
-
 }
 
 .icon-pen {
@@ -321,7 +320,6 @@ header a {
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   grid-template-rows: repeat(auto-fit, 189px);
   grid-gap: 16px 20px;
-
 }
 .portfolio-tags {
   padding-bottom: 21px;
@@ -330,19 +328,19 @@ header a {
 .portfolio-tags__item {
   font-size: 1.2rem;
   color: #666d89;
-    border: 1px solid #666d89;
-    border-radius: 6px;
-    padding: 4px;
-    margin-right: 8px;
-    cursor: pointer;
+  border: 1px solid #666d89;
+  border-radius: 5px;
+  padding: 4px 7px;
+  margin-right: 3px;
+  cursor: pointer;
 text-align: justify;
-letter-spacing: 0.5px;
+
 }
 
-.portfolio-tags__item_active, .portfolio-tags__item:hover {
-   color: #c5c5c5;
-   border: 1px solid #c5c5c5;
-
+.portfolio-tags__item_active,
+.portfolio-tags__item:hover {
+  color: #c5c5c5;
+  border: 1px solid #c5c5c5;
 }
 
 .about {
@@ -375,7 +373,7 @@ letter-spacing: 0.5px;
   line-height: 1.8;
   font-size: 1.2rem;
   text-align: justify;
-  padding-bottom:22px;
+  padding-bottom: 22px;
 }
 
 .social {
