@@ -5,28 +5,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>singolo 3</title>
+  <link rel="stylesheet" href="singolo3.css">
 </head>
 
 <body>
   <section class="quote">
-    <h2 class="title"></h2>
-    <p class="text">
+    <div class="wrapper">
+      <div class="container">
 
-    </p>
-    <div class="quote-wrapper">
-      <div class="quote-form">
-        <form action="#">
-          <input type="text">
-          <input type="email">
-          <input type="text">
-          <input type="text">
-          <button>Submit</button>
-        </form>
+        <h2 class="quote__title">Get a Quote</h2>
+        <p class="quote__text">
+          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat
+          porttitor
+          ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
+          nibh.
+        </p>
+        <div class="quote-wrapper">
+          <div class="quote-form">
+            <form action="#">
+              <input type="text" placeholder="Name (Required)" required>
+              <input type="email" placeholder="Email (Required)" required>
+              <input type="text" placeholder="Subject">
 
-      </div>
-      <div class="quote-information">
+<textarea class="quote-form__describe-text" name="text" placeholder="Describe your project in detail..."></textarea>
 
 
+              <button class="form-button">Submit</button>
+            </form>
+
+          </div>
+          <div class="quote-information">
+            <div class="quote-information__title">
+              Contact Information
+            </div>
+            <div class="quote-information__text">
+
+            Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat
+            libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.
+            <br><br>
+            <span class="ico-location"></span>Elm St. 14/05 Lost City<br>
+            <span class="ico-phone"></span>03528 331 86 35<br>
+            <span class="ico-email"></span>info@singolo.com
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -35,7 +57,21 @@
 
   <footer class="footer">
 
+    <div class="wrapper">
+      <div class="container ">
+        <div class="footer__wrapper">
 
+
+        <div class="footer__text">© Copyright 2013</div>
+        <div class="social">
+          <div class="facebook"></div>
+          <div class="google"></div>
+          <div class="twitter"></div>
+          <div class="linkedin"></div>
+        </div>
+      </div>
+    </div>
+</div>
   </footer>
 </body>
 
