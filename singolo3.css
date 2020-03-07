@@ -494,8 +494,14 @@ header a {
   font-size: 1.2rem;
 }
 
+.quote-form input:focus, .quote-form__describe-text:focus {
+box-shadow: 0 0 0px 2px #6866c9;
+outline: none;
+}
+
 .quote-form input:invalid {
   border: 1px solid #ff0000;
+
 }
 
 .quote-form__describe-text {
