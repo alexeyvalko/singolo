@@ -332,8 +332,6 @@ header a {
   cursor: pointer;
   transition: all 0.3s ease;
   background-color: #464b5e;
-
-
 }
 
 .portfolio-grid__item:hover {
@@ -351,9 +349,8 @@ header a {
   padding: 4px 7px;
   margin-right: 3px;
   cursor: pointer;
-text-align: justify;
-transition: all 0.3s ease;
-
+  text-align: justify;
+  transition: all 0.3s ease;
 }
 
 .portfolio-tags__item_active,
@@ -399,7 +396,6 @@ transition: all 0.3s ease;
 
 .social {
   display: inline-block;
-
 }
 .google {
   background: url(./assets/img/Google.png);
@@ -438,7 +434,10 @@ transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-.google:hover, .facebook:hover, .twitter:hover, .linkedin:hover {
+.google:hover,
+.facebook:hover,
+.twitter:hover,
+.linkedin:hover {
   opacity: 0.7;
 }
 /*Singolo PART 3*/
@@ -452,7 +451,7 @@ transition: all 0.3s ease;
   line-height: 3rem;
   font-family: "Lato Light";
   letter-spacing: -0.22px;
-color: #f0d8d9;
+  color: #f0d8d9;
   text-align: justify;
   padding-bottom: 10px;
 }
@@ -462,45 +461,51 @@ color: #f0d8d9;
   color: #f0d8d9;
   font-size: 3rem;
   font-family: "Lato Black";
-
 }
 .quote-wrapper {
   display: flex;
   justify-content: space-between;
-  padding-top: 14.2px;
+  padding-top: 14.8px;
 }
 .quote-form {
-  flex-basis:64vw;
-
-
+  flex-basis: 64vw;
 }
 
 .quote-form input {
+  border: 1px solid #d6564f;
+  display: block;
+  width: calc(100% - 20px);
+  height: 38px;
+  border-radius: 5px;
+  padding-left: 14px;
+  padding-top: 4px;
+  margin-bottom: 16px;
+  background-color: #d6564f;
+  color: #f0d8d9;
+  font-size: 1.2rem;
+  line-height: 22px;
+  font-family: "Lato Regular", sans-serif;
+}
+
+.quote-form input::placeholder,
+.quote-form__describe-text::placeholder {
+  color: #f48c8f;
+  font-family: "Lato Regular", sans-serif;
+  font-size: 1.2rem;
+}
+
+.quote-form input:invalid {
+  border: 1px solid #ff0000;
+}
+
+.quote-form__describe-text {
+  min-height: 202.6px;
   display: block;
   width: calc(100% - 20px);
   border-radius: 5px;
   border: none;
-  padding: 12px;
-  margin-bottom: 15.8px;
-  background-color: #d6564f;
-  color: #f0d8d9;
-  font-size: 1.2rem;
-  font-family: "Lato Regular", sans-serif;
-}
-
-.quote-form input::placeholder, .quote-form__describe-text::placeholder {
-  color: #f48c8f;
-  font-family: "Lato Regular", sans-serif;
-
-}
-
-.quote-form__describe-text {
-min-height: 202.6px;
-display: block;
-  width: calc(100% - 20px);
-  border-radius: 5px;
-  border: none;
-  padding: 12.4px;
+  padding-left: 14px;
+  padding-top: 12px;
   margin-bottom: 15px;
   background-color: #d6564f;
   color: #f0d8d9;
@@ -512,46 +517,47 @@ display: block;
   border-radius: 5px;
   background-color: #d6564f;
   font-size: 1.4rem;
-line-height: 1.4rem;
+  line-height: 1.4rem;
   color: #f0d8d9;
   border: none;
-text-align: center;
+  text-align: center;
   padding: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.form-button:hover{
+.form-button:hover {
   background-color: #bb433c;
 }
 
 .quote-information {
-  flex-basis:30vw;
-
+  flex-basis: 30vw;
 }
 .quote-information__title {
-color: #f0d8d9;
-font-family: "Lato Black";
-font-size: 1.8rem;
-padding-bottom: 8px;
+  color: #f0d8d9;
+  font-family: "Lato Black";
+  font-size: 1.8rem;
+  padding-bottom: 8px;
 }
-.quote-information__text {
-  font-family: 'Lato-Regular',sans-serif;
-    font-size: 1.2rem;
-    font-weight: 400;
-    line-height: 2.2rem;
-    letter-spacing: -0.01em;
-    color: #f0d8d9;
-    padding-right: 0px;
-    padding-bottom: 20px;
-    text-align: justify;
+.quote-information__text,
+.quote-information__text a {
+  font-family: "Lato-Regular", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 2.2rem;
+  letter-spacing: -0.01em;
+  color: #f0d8d9;
+  padding-right: 0px;
+  padding-bottom: 20px;
+  text-align: justify;
+  text-decoration: none;
 }
 
 .ico-location {
   display: inline-block;
-  background: url("./assets/img/icon-location.svg") no-repeat ;
+  background: url("./assets/img/icon-location.svg") no-repeat;
   margin-right: 13px;
   width: 7px;
-  height: 11px;;
+  height: 11px;
 }
 
 .ico-phone {
@@ -567,18 +573,16 @@ padding-bottom: 8px;
   background: url("./assets/img/icon-mail.svg") no-repeat;
   margin-right: 10px;
   width: 13px;
-  height: 8px
+  height: 8px;
 }
-
 
 .footer {
   background-color: #2d303a;
   font-size: 1.2rem;
-
 }
 
 .footer__wrapper {
-min-height: 76px;
+  min-height: 76px;
   display: flex;
   justify-content: space-between;
   align-items: center;
