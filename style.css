@@ -60,7 +60,7 @@ html {
 }
 
 body {
-  font-family: "Lato Regular", sans-serif;
+  font-family: "Lato Regular", "Lato", sans-serif;
   font-size: 1.8rem;
   color: #767e9e;
   padding: 0;
@@ -333,6 +333,10 @@ margin-right:71px;
   cursor: pointer;
   transition: all 0.3s ease;
   background-color: #464b5e;
+}
+
+.portfolio-grid__item:nth-child(1n+13) {
+  display: none;
 }
 
 .portfolio-grid__item:hover {
