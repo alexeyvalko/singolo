@@ -179,13 +179,12 @@ header a {
   justify-content: space-between;
 }
 .iphone-vertical {
-padding-top: 1px;
-margin-left: 72.2px;
+  padding-top: 1px;
+  margin-left: 72.2px;
 }
 
 .iphone-horizontal {
-margin-right:71px;
-
+  margin-right: 71px;
 }
 
 .left {
@@ -335,7 +334,7 @@ margin-right:71px;
   background-color: #464b5e;
 }
 
-.portfolio-grid__item:nth-child(1n+13) {
+.portfolio-grid__item:nth-child(1n + 13) {
   display: none;
 }
 
@@ -390,6 +389,7 @@ margin-right:71px;
   color: #666d89;
   margin-top: 12px;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 .about-grid__item__text {
   margin-top: 9px;
