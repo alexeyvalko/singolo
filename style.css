@@ -505,8 +505,9 @@ header a {
   outline: none;
 }
 
-.quote-form input:invalid {
+.quote-form input:focus:invalid {
   border: 1px solid #ff0000;
+  background-color: #db4038;
 }
 
 .quote-form__describe-text {
