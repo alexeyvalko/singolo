@@ -39,6 +39,7 @@ const moveSlidesLeft = () => {
 const portfolioMenu = (event) => {
   let random = Math.floor(Math.random() * (13 - 1) + 1);
   let htmlItem = `<div class="portfolio-grid__item"><img src="./assets/img/portfolio-img${random}.png" alt="img"></div>`;
+
   if (event.target.tagName === 'SPAN') {
     portfolio.querySelectorAll('.portfolio-tags__item').forEach(item => item.classList.remove('portfolio-tags__item_active'));
     event.target.classList.add('portfolio-tags__item_active');
