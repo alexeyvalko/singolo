@@ -55,8 +55,6 @@ const portfolioBorder = (event) => {
     portfolio.querySelectorAll('img').forEach(item => item.parentElement.classList.remove('portfolio-grid__item__border'));
     event.target.parentElement.classList.add('portfolio-grid__item__border');
 
-    console.log(event.target);
-    console.log(event.currentTarget);
   }
 };
 
@@ -93,11 +91,36 @@ const removeModal = (event) => {
   };
 };
 
+const screenVoff = (event) => {
+  if (document.querySelector(".screen-off-vertical")) {
+      document.querySelector(".screen-off-vertical").remove();
+
+  } else {
+  document.querySelector(".first-slide").insertAdjacentHTML('beforeend', '<div class="screen-off-vertical"></div>');
+  console.log(event.target);
+  }
+};
+const screenHoff = (event) => {
+  if (document.querySelector(".screen-off-horizontal")) {
+    document.querySelector(".screen-off-horizontal").remove();
+
+  } else {
+    document.querySelector(".first-slide").insertAdjacentHTML('beforeend', '<div class="screen-off-horizontal"></div>');
+    console.log(event.target);
+  }
+};
+
 
 document.querySelector('#form-button').addEventListener('click', showModal);
 document.querySelector('#close-btn').addEventListener('click', removeModal);
+
 portfolio.querySelector('.portfolio-grid').addEventListener('click', portfolioBorder);
 portfolio.querySelector('.portfolio-tags').addEventListener('click', portfolioMenu);
+
 menu.querySelector('ul').addEventListener('click', navMenu);
+
+slider.querySelector('.iphone-vertical').addEventListener('click', screenVoff);
+slider.querySelector('.iphone-horizontal').addEventListener('click', screenHoff);
+
 slider.querySelector('.right').addEventListener('click', moveSlidesRight);
 slider.querySelector('.left').addEventListener('click', moveSlidesLeft);
