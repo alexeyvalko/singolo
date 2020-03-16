@@ -9,21 +9,21 @@
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body id='home'>
 
   <header id="header">
     <div class="wrapper">
       <div class="container">
         <div class="header-wrapper">
           <div class="logo">
-            <a href="#header">
+            <a href="#home">
               <h1>Singolo</h1>
             </a>
             <span>*</span>
           </div>
-          <nav class="header-navigation">
+          <nav class="header-navigation" id="menu">
             <ul>
-              <li><a href="" class="active">home</a></li>
+              <li><a href="#home" class="active">home</a></li>
               <li><a href="#services">services</a></li>
               <li><a href="#portfolio">portfolio</a></li>
               <li><a href="#about">about</a></li>
@@ -37,14 +37,21 @@
 
   <main>
 
-    <div class="slider">
+    <div class="slider" id="slider">
       <div class="wrapper">
         <div class="container">
-          <div class="iphone">
-            <img src="./assets/img/iPhone_Vertical.png" alt="iphone" class="iphone-vertical">
-            <img src="./assets/img/iPhone_Horizontal.png" alt="iphone" class="iphone-horizontal">
-          </div>
+          <div class="parent-slider">
 
+            <div class="first-slide slide">
+              <img src="./assets/img/iPhone_Vertical.png" alt="iphone" class="iphone-vertical">
+              <img src="./assets/img/iPhone_Horizontal.png" alt="iphone" class="iphone-horizontal">
+
+
+            </div>
+
+            <div class="second-slide slide"><img src="./assets/img/Slide-2.png" alt="phone"></div>
+
+          </div>
           <div class="left"></div>
           <div class="right"></div>
         </div>
@@ -198,13 +205,13 @@
               <form action="#">
                 <input type="text" placeholder="Name (Required)" name="name" required>
                 <input type="email" name="email" placeholder="Email (Required)" required>
-                <input type="text" name="subject" placeholder="Subject">
+                <input type="text" name="subject" id="subject" placeholder="Subject">
 
-                <textarea class="quote-form__describe-text" name="text"
+                <textarea id='description' class="quote-form__describe-text" name="text"
                   placeholder="Describe your project in detail..."></textarea>
 
 
-                <button class="form-button">Submit</button>
+                <button class="form-button" id='form-button'>Submit</button>
               </form>
 
             </div>
@@ -221,7 +228,7 @@
                 <br><br>
                 <span class="ico-location"></span><a href="#">Elm St. 14/05 Lost City</a><br>
                 <span class="ico-phone"></span><a href="tel:035283318635"> 03528 331 8635 </a><br>
-                <span class="ico-email"></span><a href="email:info@singolo.com">info@singolo.com</a>
+                <span class="ico-email"></span><a href="mailto:info@singolo.com">info@singolo.com</a>
               </div>
             </div>
           </div>
@@ -250,6 +257,15 @@
       </div>
     </div>
   </main>
+  <div class="modal" id="modal" style="display: none;">
+    <div class="modal-window" id='modal-window'>
+      <div><strong>Письмо отправлено!</strong></div>
+      <span id="subject-text">Тема: </span><span id="subject-theme" class="subject-theme">Без темы</span><br>
+      <span id="subject-description">Описание: </span> <span class="description-text" id="description-text"></span><br>
+      <button class="form-button close-btn" id='close-btn'>OK</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
 
 </body>
 
