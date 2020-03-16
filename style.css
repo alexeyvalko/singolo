@@ -208,7 +208,25 @@ header a {
   padding-left: 72px;
   margin-right: 72px;
 }
+.iphone-vertical-hidden {
+position: absolute;
+width: 214px;
+height: 458px;
+top: 62px;
+left: 72px;
+border-radius: 20px;
+z-index: 3;
+}
+.iphone-horizontal-hidden {
+position: absolute;
 
+height: 214px;
+width: 458px;
+top: 184px;
+right: 99px;
+border-radius: 20px;
+z-index: 4;
+}
 .iphone-horizontal {
   margin-top: 15px;
   padding-right: 80px;
@@ -221,7 +239,7 @@ width: 192px;
 height: 350px;
 top: 120px;
 left: 84px;
-z-index: 3;
+z-index: 30;
 }
 .screen-off-horizontal {
 position: absolute;
@@ -230,7 +248,7 @@ height: 190px;
 width: 350px;
 top: 197px;
 right: 150px;
-z-index: 4;
+z-index: 40;
 }
 
 .left {
