@@ -119,8 +119,8 @@ portfolio.querySelector('.portfolio-tags').addEventListener('click', portfolioMe
 
 menu.querySelector('ul').addEventListener('click', navMenu);
 
-slider.querySelector('.iphone-vertical').addEventListener('click', screenVoff);
-slider.querySelector('.iphone-horizontal').addEventListener('click', screenHoff);
+slider.querySelector('.iphone-vertical-hidden').addEventListener('click', screenVoff);
+slider.querySelector('.iphone-horizontal-hidden').addEventListener('click', screenHoff);
 
 slider.querySelector('.right').addEventListener('click', moveSlidesRight);
 slider.querySelector('.left').addEventListener('click', moveSlidesLeft);
