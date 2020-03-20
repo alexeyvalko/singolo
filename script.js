@@ -1,9 +1,42 @@
+let clickEvent ='';
+
 const navMenu = (event) => {
+
   if (event.target.tagName === 'A') {
     menu.querySelectorAll('ul > li> a').forEach(item => item.classList.remove('active'));
+    clickEvent = event.target;
+    console.log(clickEvent);
     event.target.classList.add('active');
   };
 };
+
+const scrollMenu = (event) => {
+
+  const currentPosition = window.scrollY;
+  document.querySelectorAll('section').forEach(item => {
+
+     if (item.offsetTop <= currentPosition && (item.offsetTop + item.offsetHeight) > currentPosition) {
+
+      console.log(`currPos ${currentPosition}`);
+      console.log(`offsetTop ${item.offsetTop}`);
+      console.log(`possSum ${item.offsetTop + item.offsetHeight}`);
+
+      menu.querySelectorAll('ul > li> a').forEach(elem => {
+
+        elem.classList.remove('active');
+
+        if (item.getAttribute('id') == elem.getAttribute('href').substring(1)) {
+          elem.classList.add('active');
+
+
+        }
+      });
+    }
+  });
+};
+
+
+
 
 let counter = 0;
 
@@ -69,13 +102,13 @@ const showModal = (event) => {
     if (subject == '') {
       document.querySelector("#subject-theme").innerText = 'Без темы';
     } else {
-    document.querySelector("#subject-theme").innerText = subject;
+      document.querySelector("#subject-theme").innerText = subject;
     }
 
     if (description == '') {
       document.querySelector("#description-text").innerText = 'Без описания';
     } else {
-    document.querySelector("#description-text").innerText = description;
+      document.querySelector("#description-text").innerText = description;
     }
 
     document.querySelector('#modal').style.display = '';
@@ -93,10 +126,10 @@ const removeModal = (event) => {
 
 const screenVoff = (event) => {
   if (document.querySelector(".screen-off-vertical")) {
-      document.querySelector(".screen-off-vertical").remove();
+    document.querySelector(".screen-off-vertical").remove();
   } else {
-  document.querySelector(".first-slide").insertAdjacentHTML('beforeend', '<div class="screen-off-vertical"></div>');
-  console.log(event.target);
+    document.querySelector(".first-slide").insertAdjacentHTML('beforeend', '<div class="screen-off-vertical"></div>');
+    console.log(event.target);
   }
 };
 
@@ -116,6 +149,7 @@ document.querySelector('#close-btn').addEventListener('click', removeModal);
 portfolio.querySelector('.portfolio-grid').addEventListener('click', portfolioBorder);
 portfolio.querySelector('.portfolio-tags').addEventListener('click', portfolioMenu);
 
+document.addEventListener('scroll', scrollMenu);
 menu.querySelector('ul').addEventListener('click', navMenu);
 
 slider.querySelector('.iphone-vertical-hidden').addEventListener('click', screenVoff);

@@ -52,6 +52,7 @@
 *:before,
 *:after {
   box-sizing: border-box;
+
 }
 
 html {
@@ -79,18 +80,29 @@ header {
   position: fixed;
   width: 100%;
   z-index: 100;
-  background-color: #2d303a;
+background-color: #2d303a;
   height: 95px;
   border-bottom: 6px solid #323746;
   text-transform: uppercase;
   font-family: "Lato Bold";
 }
 
+
 header a {
   color: #fff;
   text-decoration: none;
   transition: all 0.3s ease;
 }
+/*#slider,
+#services,
+#portfolio,
+#about,
+#contact {
+  position: absolute;
+  top: -95px;
+  height: 95px;
+  width: 95px;
+}*/
 .wrapper {
   max-width: 1020px;
   margin: 0 auto;
@@ -170,6 +182,7 @@ header a {
 }
 
 .slider {
+
   padding-top: 95px;
   background-color: #f06c64;
   height: 695px;
@@ -279,10 +292,13 @@ z-index: 40;
 }
 
 .services {
+  position: relative;
+  margin-top: 1px;
   background-color: #f2f2f2;
   border-bottom: 6px solid #fff;
   padding: 62px 0 50px 0;
 }
+
 
 .title {
   margin: 0;
@@ -296,7 +312,6 @@ z-index: 40;
   line-height: 3rem;
   font-family: "Lato Light";
   letter-spacing: -0.22px;
-
   text-align: justify;
 }
 
@@ -375,6 +390,7 @@ z-index: 40;
 /*Singolo PART @*/
 
 .portfolio {
+  position: relative;
   background-color: #2d303a;
   padding: 62px 0 66px 0;
   border-bottom: 6px solid #323746;
@@ -439,6 +455,8 @@ z-index: 40;
 }
 
 .about {
+  position: relative;
+  margin-top: 2px;
   background-color: #f2f2f2;
   padding: 62px 0 59px 0;
   border-bottom: 6px solid #fff;
@@ -522,6 +540,8 @@ z-index: 40;
 }
 /*Singolo PART 3*/
 .quote {
+  position: relative;
+  margin-top: 3px;
   background-color: #f06c64;
   border-bottom: 6px solid #ea676b;
   padding: 62px 0 14px 0;
@@ -673,6 +693,7 @@ z-index: 40;
 }
 
 .footer {
+  position: relative;
   background-color: #2d303a;
   font-size: 1.2rem;
 }
