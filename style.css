@@ -75,6 +75,8 @@ h1 {
   font-family: "Lato Black";
 }
 
+
+
 header {
   top: 0;
   position: fixed;
@@ -182,7 +184,6 @@ header a {
 }
 
 .slider {
-
   padding-top: 95px;
   background-color: #f06c64;
   height: 695px;
@@ -193,12 +194,12 @@ header a {
 .parent-slider {
   display: flex;
   overflow: hidden;
-  height: 594px;
+  max-height: 594px;
+  width: 100%;
+  height: 100%;
+
 }
 
-.slide {
-  left: 0;
-}
 
 .first-slide {
   background-color: #f06c64;
@@ -208,12 +209,17 @@ header a {
   justify-content: space-between;
   flex-shrink: 0;
   width: 100%;
+  height: 100%;
   position: relative;
+  padding-top: 38px;
+
 }
 .second-slide {
+
   position: relative;
   flex-shrink: 0;
   width: 100%;
+  height: 100%;
   margin: 0 auto;
 }
 .iphone-vertical {
@@ -225,18 +231,19 @@ header a {
 position: absolute;
 width: 214px;
 height: 458px;
-top: 62px;
+top: 53px;
 left: 72px;
 border-radius: 20px;
 z-index: 3;
+
 }
 .iphone-horizontal-hidden {
 position: absolute;
 
 height: 214px;
 width: 458px;
-top: 184px;
-right: 99px;
+top: 174px;
+right: 105px;
 border-radius: 20px;
 z-index: 4;
 }
@@ -250,7 +257,7 @@ position: absolute;
 background-color: black;
 width: 192px;
 height: 350px;
-top: 120px;
+top: 115px;
 left: 84px;
 z-index: 30;
 }
@@ -259,8 +266,8 @@ position: absolute;
 background-color: black;
 height: 190px;
 width: 350px;
-top: 197px;
-right: 150px;
+top: 187px;
+right: 158px;
 z-index: 40;
 }
 
@@ -272,6 +279,7 @@ z-index: 40;
   left: 12px;
   top: 280px;
   cursor: pointer;
+
 }
 
 .right {
@@ -282,6 +290,7 @@ z-index: 40;
   right: 10px;
   top: 280px;
   cursor: pointer;
+
 }
 
 .right:hover {
@@ -763,4 +772,61 @@ z-index: 40;
 }
 .close-btn {
   flex: 0 0 auto;
+}
+
+/*SLIDER*/
+
+
+.sitem {
+  display: none;
+  position: relative;
+  animation: 0.4s ease-in-out;
+  margin: 0 auto;
+}
+
+.actives,
+.next {
+  display: block;
+}
+
+.next {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.to-left {
+  animation-name: left;
+}
+
+.from-right {
+  animation-name: right;
+}
+
+.to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
 }
