@@ -1,11 +1,11 @@
-let clickMenuTarget = 'log';
-console.log(clickMenuTarget);
+//let clickMenuTarget = 'log';
+//console.log(clickMenuTarget);
 const navMenu = (event) => {
 
   if (event.target.tagName === 'A') {
     menu.querySelectorAll('ul > li> a').forEach(item => item.classList.remove('active'));
-console.log(clickMenuTarget);
-clickMenuTarget = event.target.toString().split('#')[1].toString();
+
+    //clickMenuTarget = event.target.toString().split('#')[1].toString();
     event.target.classList.add('active');
   };
 };
@@ -24,16 +24,21 @@ const scrollMenu = (event) => {
     if (anchor.getBoundingClientRect().top <= 1) {
 
       menu.querySelectorAll('ul > li> a').forEach(elem => {
-        if (clickMenuTarget != elem.getAttribute('href').substring(1)) {
-            elem.classList.remove('active');
-        }
+
+        //if (clickMenuTarget != elem.getAttribute('href').substring(1)) {
+        elem.classList.remove('active');
+
+
+        // }
 
 
         if (anchor.getAttribute('id') == elem.getAttribute('href').substring(1)) {
+
           elem.classList.add('active');
 
 
         }
+
       });
     }
   });
@@ -80,7 +85,7 @@ const scrollMenu = (event) => {
 
 const portfolioMenu = (event) => {
   //let random = Math.floor(Math.random() * (13 - 1) + 1);
- // let htmlItem = `<div class="portfolio-grid__item"><img src="./assets/img/portfolio-img${random}.png" alt="img"></div>`;
+  // let htmlItem = `<div class="portfolio-grid__item"><img src="./assets/img/portfolio-img${random}.png" alt="img"></div>`;
 
   if (event.target.tagName === 'SPAN') {
     document.querySelectorAll('.portfolio-tags__item').forEach(item => item.classList.remove('portfolio-tags__item_active'));
@@ -223,6 +228,3 @@ document.querySelector('.right').addEventListener('click', function () {
     nextItem(currentItem);
   }
 })
-
-
-
