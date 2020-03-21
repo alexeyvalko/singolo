@@ -71,14 +71,18 @@ const scrollMenu = (event) => {
 
 
 const portfolioMenu = (event) => {
-  let random = Math.floor(Math.random() * (13 - 1) + 1);
-  let htmlItem = `<div class="portfolio-grid__item"><img src="./assets/img/portfolio-img${random}.png" alt="img"></div>`;
+  //let random = Math.floor(Math.random() * (13 - 1) + 1);
+ // let htmlItem = `<div class="portfolio-grid__item"><img src="./assets/img/portfolio-img${random}.png" alt="img"></div>`;
 
   if (event.target.tagName === 'SPAN') {
     portfolio.querySelectorAll('.portfolio-tags__item').forEach(item => item.classList.remove('portfolio-tags__item_active'));
     event.target.classList.add('portfolio-tags__item_active');
-    document.querySelector(`#portfolio > div > div > div.portfolio-grid > div:nth-child(${random})`).remove();
-    document.querySelector("#portfolio > div > div > div.portfolio-grid").insertAdjacentHTML('beforeend', htmlItem);
+
+    let htmlItem = document.querySelector(`#portfolio > div > div > div.portfolio-grid > div:nth-child(1)`);
+    console.log(htmlItem);
+    //document.querySelector(`#portfolio > div > div > div.portfolio-grid > div:first-child`).remove();
+    document.querySelector(`#portfolio > div > div > div.portfolio-grid > div:nth-child(1)`).remove();
+    document.querySelector("#portfolio > div > div > div.portfolio-grid").append(htmlItem);
   }
 };
 

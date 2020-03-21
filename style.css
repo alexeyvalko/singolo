@@ -52,7 +52,6 @@
 *:before,
 *:after {
   box-sizing: border-box;
-
 }
 
 html {
@@ -75,20 +74,17 @@ h1 {
   font-family: "Lato Black";
 }
 
-
-
 header {
   top: 0;
   position: fixed;
   width: 100%;
   z-index: 100;
-background-color: #2d303a;
+  background-color: #2d303a;
   height: 95px;
   border-bottom: 6px solid #323746;
   text-transform: uppercase;
   font-family: "Lato Bold";
 }
-
 
 header a {
   color: #fff;
@@ -197,9 +193,7 @@ header a {
   max-height: 594px;
   width: 100%;
   height: 100%;
-
 }
-
 
 .first-slide {
   background-color: #f06c64;
@@ -212,10 +206,8 @@ header a {
   height: 100%;
   position: relative;
   padding-top: 38px;
-
 }
 .second-slide {
-
   position: relative;
   flex-shrink: 0;
   width: 100%;
@@ -228,24 +220,23 @@ header a {
   margin-right: 72px;
 }
 .iphone-vertical-hidden {
-position: absolute;
-width: 214px;
-height: 458px;
-top: 53px;
-left: 72px;
-border-radius: 20px;
-z-index: 3;
-
+  position: absolute;
+  width: 214px;
+  height: 458px;
+  top: 53px;
+  left: 72px;
+  border-radius: 20px;
+  z-index: 3;
 }
 .iphone-horizontal-hidden {
-position: absolute;
+  position: absolute;
 
-height: 214px;
-width: 458px;
-top: 174px;
-right: 105px;
-border-radius: 20px;
-z-index: 4;
+  height: 214px;
+  width: 458px;
+  top: 174px;
+  right: 105px;
+  border-radius: 20px;
+  z-index: 4;
 }
 .iphone-horizontal {
   margin-top: 15px;
@@ -253,22 +244,22 @@ z-index: 4;
 }
 
 .screen-off-vertical {
-position: absolute;
-background-color: black;
-width: 192px;
-height: 350px;
-top: 115px;
-left: 84px;
-z-index: 30;
+  position: absolute;
+  background-color: black;
+  width: 192px;
+  height: 350px;
+  top: 115px;
+  left: 84px;
+  z-index: 30;
 }
 .screen-off-horizontal {
-position: absolute;
-background-color: black;
-height: 190px;
-width: 350px;
-top: 187px;
-right: 158px;
-z-index: 40;
+  position: absolute;
+  background-color: black;
+  height: 190px;
+  width: 350px;
+  top: 187px;
+  right: 158px;
+  z-index: 40;
 }
 
 .left {
@@ -279,7 +270,6 @@ z-index: 40;
   left: 12px;
   top: 280px;
   cursor: pointer;
-
 }
 
 .right {
@@ -290,7 +280,6 @@ z-index: 40;
   right: 10px;
   top: 280px;
   cursor: pointer;
-
 }
 
 .right:hover {
@@ -307,7 +296,6 @@ z-index: 40;
   border-bottom: 6px solid #fff;
   padding: 62px 0 50px 0;
 }
-
 
 .title {
   margin: 0;
@@ -775,7 +763,6 @@ z-index: 40;
 }
 
 /*SLIDER*/
-
 
 .sitem {
   display: none;
