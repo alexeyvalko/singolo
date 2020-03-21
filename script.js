@@ -1,7 +1,11 @@
+let clickMenuTarget = 'log';
+console.log(clickMenuTarget);
 const navMenu = (event) => {
 
   if (event.target.tagName === 'A') {
     menu.querySelectorAll('ul > li> a').forEach(item => item.classList.remove('active'));
+console.log(clickMenuTarget);
+clickMenuTarget = event.target.toString().split('#')[1].toString();
     event.target.classList.add('active');
   };
 };
@@ -9,19 +13,23 @@ const navMenu = (event) => {
 const scrollMenu = (event) => {
 
   const currentPosition = window.scrollY;
-  document.querySelectorAll('section').forEach(item => {
+  document.querySelectorAll('section > div:nth-child(1)').forEach(anchor => {
 
-    if (item.offsetTop <= currentPosition && (item.offsetTop + item.offsetHeight) > currentPosition) {
+    console.log(`currPos ${currentPosition}`);
+    console.log(`anchorOffsetTop ${anchor.offsetTop}`);
+    console.log(`possSum ${anchor.offsetTop + anchor.offsetHeight}`);
 
-      console.log(`currPos ${currentPosition}`);
-      console.log(`offsetTop ${item.offsetTop}`);
-      console.log(`possSum ${item.offsetTop + item.offsetHeight}`);
+    console.log(`getBoundingClientRect ${anchor.getBoundingClientRect().top}`);
+
+    if (anchor.getBoundingClientRect().top <= 1) {
 
       menu.querySelectorAll('ul > li> a').forEach(elem => {
+        if (clickMenuTarget != elem.getAttribute('href').substring(1)) {
+            elem.classList.remove('active');
+        }
 
-        elem.classList.remove('active');
 
-        if (item.getAttribute('id') == elem.getAttribute('href').substring(1)) {
+        if (anchor.getAttribute('id') == elem.getAttribute('href').substring(1)) {
           elem.classList.add('active');
 
 
@@ -75,7 +83,7 @@ const portfolioMenu = (event) => {
  // let htmlItem = `<div class="portfolio-grid__item"><img src="./assets/img/portfolio-img${random}.png" alt="img"></div>`;
 
   if (event.target.tagName === 'SPAN') {
-    portfolio.querySelectorAll('.portfolio-tags__item').forEach(item => item.classList.remove('portfolio-tags__item_active'));
+    document.querySelectorAll('.portfolio-tags__item').forEach(item => item.classList.remove('portfolio-tags__item_active'));
     event.target.classList.add('portfolio-tags__item_active');
 
     let htmlItem = document.querySelector(`#portfolio > div > div > div.portfolio-grid > div:nth-child(1)`);
@@ -90,7 +98,7 @@ const portfolioMenu = (event) => {
 const portfolioBorder = (event) => {
   if (event.target.tagName === 'IMG') {
 
-    portfolio.querySelectorAll('img').forEach(item => item.parentElement.classList.remove('portfolio-grid__item__border'));
+    document.querySelectorAll('img').forEach(item => item.parentElement.classList.remove('portfolio-grid__item__border'));
     event.target.parentElement.classList.add('portfolio-grid__item__border');
 
   }
@@ -151,15 +159,16 @@ const screenHoff = (event) => {
 document.querySelector('#form-button').addEventListener('click', showModal);
 document.querySelector('#close-btn').addEventListener('click', removeModal);
 
-portfolio.querySelector('.portfolio-grid').addEventListener('click', portfolioBorder);
-portfolio.querySelector('.portfolio-tags').addEventListener('click', portfolioMenu);
+document.querySelector('.portfolio-grid').addEventListener('click', portfolioBorder);
+document.querySelector('.portfolio-tags').addEventListener('click', portfolioMenu);
 
 document.addEventListener('scroll', scrollMenu);
 
-// menu.querySelector('ul').addEventListener('click', navMenu);
+menu.querySelector('ul').addEventListener('click', navMenu);
 
-slider.querySelector('.iphone-vertical-hidden').addEventListener('click', screenVoff);
-slider.querySelector('.iphone-horizontal-hidden').addEventListener('click', screenHoff);
+
+document.querySelector('.iphone-vertical-hidden').addEventListener('click', screenVoff);
+document.querySelector('.iphone-horizontal-hidden').addEventListener('click', screenHoff);
 
 
 // slider.querySelector('.right').addEventListener('click', moveSlidesRight);

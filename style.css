@@ -91,7 +91,7 @@ header a {
   text-decoration: none;
   transition: all 0.3s ease;
 }
-/*#slider,
+#slider,
 #services,
 #portfolio,
 #about,
@@ -100,7 +100,7 @@ header a {
   top: -95px;
   height: 95px;
   width: 95px;
-}*/
+}
 .wrapper {
   max-width: 1020px;
   margin: 0 auto;
