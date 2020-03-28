@@ -91,11 +91,12 @@ const portfolioMenu = (event) => {
     document.querySelectorAll('.portfolio-tags__item').forEach(item => item.classList.remove('portfolio-tags__item_active'));
     event.target.classList.add('portfolio-tags__item_active');
 
-    let htmlItem = document.querySelector(`#portfolio > div > div > div.portfolio-grid > div:nth-child(1)`);
+    let htmlItem = document.querySelector(`#main > section.portfolio > div.wrapper > div > div.portfolio-grid > div:nth-child(1)`);
     console.log(htmlItem);
     //document.querySelector(`#portfolio > div > div > div.portfolio-grid > div:first-child`).remove();
-    document.querySelector(`#portfolio > div > div > div.portfolio-grid > div:nth-child(1)`).remove();
-    document.querySelector("#portfolio > div > div > div.portfolio-grid").append(htmlItem);
+    document.querySelector(`#main > section.portfolio > div.wrapper > div > div.portfolio-grid > div:nth-child(1)`).remove();
+    console.log(htmlItem);
+    document.querySelector("#main > section.portfolio > div.wrapper > div > div.portfolio-grid").append(htmlItem);
   }
 };
 
