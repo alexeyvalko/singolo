@@ -672,6 +672,7 @@ header a {
 }
 .form-button:hover {
   background-color: #3eac3e;
+  color: #fff;
 }
 
 .quote-information {
