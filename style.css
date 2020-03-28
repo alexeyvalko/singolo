@@ -877,7 +877,7 @@ z-index: 50;
   align-items: start;
   color: #c5c5c5;
   position: fixed;
-  left: 0px;
+  left: 0;
   top: 0px;
   z-index: 105;
   height: 100%;

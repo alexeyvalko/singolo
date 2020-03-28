@@ -184,6 +184,7 @@ document.querySelector('.iphone-horizontal-hidden').addEventListener('click', sc
 
 
 let items = document.querySelectorAll('.sitem');
+
 let currentItem = 0;
 let isEnabled = true;
 
@@ -251,12 +252,19 @@ function rotateBurger(e) {
 function showMobileMenu() {
   if (document.querySelector('.display')) {
     document.querySelector('#home').insertAdjacentHTML('beforeend', '<div class="shadow"></div>');
+
     document.querySelector('.mobile-menu').classList.remove('display');
     document.querySelector('.shadow').addEventListener('click', rotateBurger);
-    document.querySelector('.header-wrapper').addEventListener('click', rotateBurger);
+
+if (!document.querySelector('.display')) {
+
+       document.querySelector('.header-wrapper').addEventListener('click', rotateBurger);
+    }
+
 
 
   } else {
+
     document.querySelector('.mobile-menu').classList.add('display');
     document.querySelector(".shadow").remove();
 
@@ -265,4 +273,11 @@ function showMobileMenu() {
 }
 
 
+
+
 document.querySelector('.burger').addEventListener('click', rotateBurger);
+
+
+
+
+
