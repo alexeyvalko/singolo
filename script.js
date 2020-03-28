@@ -3,21 +3,21 @@
 const navMenu = (event) => {
 
   if (event.target.tagName === 'A') {
-    menu.querySelectorAll('ul > li> a').forEach(item => item.classList.remove('active'));
+    document.querySelectorAll('ul > li> a').forEach(item => item.classList.remove('active'));
 
     //clickMenuTarget = event.target.toString().split('#')[1].toString();
     event.target.classList.add('active');
+
+    rotateBurger();
   };
 };
 
 const scrollMenu = (event) => {
 
-  const currentPosition = window.scrollY;
+
   document.querySelectorAll('section > div:nth-child(1)').forEach(anchor => {
 
-    console.log(`currPos ${currentPosition}`);
-    console.log(`anchorOffsetTop ${anchor.offsetTop}`);
-    console.log(`possSum ${anchor.offsetTop + anchor.offsetHeight}`);
+
 
     console.log(`getBoundingClientRect ${anchor.getBoundingClientRect().top}`);
 
@@ -170,7 +170,9 @@ document.querySelector('.portfolio-tags').addEventListener('click', portfolioMen
 
 document.addEventListener('scroll', scrollMenu);
 
-menu.querySelector('ul').addEventListener('click', navMenu);
+document.querySelector('ul').addEventListener('click', navMenu);
+
+
 
 
 document.querySelector('.iphone-vertical-hidden').addEventListener('click', screenVoff);
@@ -228,4 +230,37 @@ document.querySelector('.right').addEventListener('click', function () {
   if (isEnabled) {
     nextItem(currentItem);
   }
-})
+});
+
+
+
+function rotateBurger(e) {
+
+  if (document.querySelector('.rotate-burger')) {
+    document.querySelector('.burger').classList.remove('rotate-burger');
+showMobileMenu();
+  } else {
+    document.querySelector('.burger').classList.add('rotate-burger');
+showMobileMenu();
+  }
+
+}
+
+
+
+function showMobileMenu() {
+  if (document.querySelector('.display')) {
+document.querySelector('#home').insertAdjacentHTML('beforeend', '<div class="shadow"></div>');
+    document.querySelector('.mobile-menu').classList.remove('display');
+
+
+  } else {
+    document.querySelector('.mobile-menu').classList.add('display');
+    document.querySelector(".shadow").remove();
+
+  }
+
+}
+
+
+document.querySelector('.burger').addEventListener('click', rotateBurger);
